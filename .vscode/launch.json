@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Windows: usa gdb de MSYS2
+      "name": "Debug Calculator (Windows)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/C/Calculator.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "console": "integratedTerminal",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "preLaunchTask": "build app (Windows)"
+    },
+    {
+      // macOS: usa lldb
+      "name": "Debug Calculator (macOS)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/C/Calculator.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "console": "integratedTerminal",
+      "MIMode": "lldb",
+      "preLaunchTask": "build app (macOS)"
+    },
+    {
+      // Linux: usa gdb
+      "name": "Debug Calculator (Linux)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/C/Calculator.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "build app (Linux)"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build app (Windows)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/C/Calculator.c",
+                "-o",
+                "${workspaceFolder}/C/Calculator.exe"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build app (macOS)",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-g",
+                "${workspaceFolder}/C/Calculator.c",
+                "-o",
+                "${workspaceFolder}/C/Calculator.out"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build app (Linux)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/C/Calculator.c",
+                "-o",
+                "${workspaceFolder}/C/Calculator.out"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang compilar archivo activo",
+            "command": "/usr/bin/clang",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarea generada por el depurador."
+        }
+    ]
+}
